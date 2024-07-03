@@ -1,0 +1,41 @@
+{
+  "manifest_version": 2,
+  "name": "Rephraser",
+  "version": "1.0",
+  "description": "Rephrases selected text using OpenAI.",
+  "permissions": [
+    "activeTab",
+    "contextMenus",
+    "clipboardWrite",
+    "notifications",
+    "storage",
+    "https://api.openai.com/"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "styles.css"
+      ]
+    }
+  ],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "icons/border-48.png"
+    }
+  },
+  "icons": {
+    "48": "icons/border-48.png"
+  }
+}

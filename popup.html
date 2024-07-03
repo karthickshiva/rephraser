@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Text Rephraser Settings</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Text Rephraser Settings</h1>
+    <form id="settingsForm">
+        <label for="apiKey">OpenAI API Key:</label>
+        <input type="text" id="apiKey" name="apiKey" required>
+        <button type="submit">Save</button>
+    </form>
+    <script src="popup.js"></script>
+</body>
+
+</html>
