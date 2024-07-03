@@ -4,20 +4,40 @@
 <head>
     <title>Text Rephraser Settings</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
         body {
-            font-family: Arial, sans-serif;
             padding: 10px;
+            font-family: "Open Sans", sans-serif;
         }
 
         label {
-            display: block;
             margin-bottom: 8px;
         }
 
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1 {
+            font-size: 18px;
+        }
+
+
         input[type="text"] {
-            width: 100%;
             padding: 8px;
             margin-bottom: 10px;
+        }
+
+        .form-button {
+            margin-top: 20px;
+            flex-direction: row-reverse;
+        }
+
+        .form-input {
+            display: flex;
+            flex-direction: column;
         }
 
         button {
@@ -35,11 +55,18 @@
 </head>
 
 <body>
-    <h1>Text Rephraser Settings</h1>
+    <h1>Rephraser</h1>
     <form id="settingsForm">
-        <label for="apiKey">OpenAI API Key:</label>
-        <input type="text" id="apiKey" name="apiKey" required>
-        <button type="submit">Save</button>
+        <div class="form-input">
+            <label for="apiKey">OpenAI API Key:</label>
+            <input type="password" id="apiKey" name="apiKey" required>
+        </div>
+        <div class="form-button">
+            <button type="submit">Save</button>
+        </div>
+        <div class="form-message">
+            <p id="formMessage"></p>
+        </div>
     </form>
     <script src="popup.js"></script>
 </body>

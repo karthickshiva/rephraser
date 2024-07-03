@@ -46,7 +46,7 @@ async function rephraseText(text, apiKey) {
         const rephrasedText = data.choices[0].message.content.trim();
         return rephrasedText;
     } catch (error) {
-        throw error;
+        throw new Error('Invalid API Key or OpenAI is down');
     }
 }
 

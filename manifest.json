@@ -37,5 +37,11 @@
   },
   "icons": {
     "48": "icons/border-48.png"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "karthickshiva@hotmail.com",
+      "strict_min_version": "42.0"
+    }
   }
 }

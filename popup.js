@@ -11,6 +11,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         e.preventDefault();
         const apiKey = apiKeyInput.value;
         await browser.storage.local.set({ apiKey });
-        alert('API key saved successfully!');
+        document.getElementById('formMessage').innerText = 'API key successfully stored locally.'
     });
 });
